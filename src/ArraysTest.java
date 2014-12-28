@@ -1,7 +1,11 @@
 import static org.junit.Assert.*;
 import org.junit.Test;
 
-public class ArraysTest {	
+public class ArraysTest 
+{	
+	// Los arreglo contiene un indice extra el cual
+	// tiene como valor ''
+	// este se les asigna como default al último de toda cadena
 	
 	@Test
 	public void testMultidimensional() 
@@ -29,6 +33,7 @@ public class ArraysTest {
 		
 	}
 	
+	// Declaration, allocation, initialization
 	@Test
 	public void testMDLI() 
 	{
@@ -91,7 +96,7 @@ public class ArraysTest {
 		assertEquals(53, miArray.length);
 		
 	}
-	
+	 	
 }
 
 
