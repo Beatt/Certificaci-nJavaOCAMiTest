@@ -14,7 +14,11 @@ public class MethodMain {
 	 * 			static
 	 * 
 	 * De los cuales public y static son obligatorios para que la 
-	 * 	JVM permita ejecutarlo...
+	 * 	JVM permita ejecutar el método main.
+	 * 
+	 * El orden de public, static y final si se decide colocarlo
+	 * 	no importa, cualquiera puede ir antes o despues del tipo de
+	 * 	retorno...
 	 * 
 	 * 
 	 */
