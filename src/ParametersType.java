@@ -35,7 +35,7 @@ public class ParametersType {
 //	}
 
 	// Ya que el tipo char pertenece al grupo de character 
-	// no se permite que convertir de un tipo de dato
+	// no se permite convertir de un tipo de dato
 	// de otro grupo , solo se permite del mismo grupo
 	// y el grupo solo existen un tipo char
 //	private char metodoReturnChar() 

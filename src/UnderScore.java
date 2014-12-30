@@ -22,7 +22,7 @@ public class UnderScore {
 		assertEquals(699101, datoLong2);
 		
 		int datoInt = 1_000_000;
-		assertEquals(1_000_000, datoInt);
+		assertEquals(1_000_000, datoInt);				
 		
 		float datoFloat1 = 1_000_000f;
 		assertEquals(1_000_000, datoFloat1, -.1);

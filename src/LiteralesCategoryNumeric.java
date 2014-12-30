@@ -28,8 +28,11 @@ public class LiteralesCategoryNumeric {
 	 * 
 	 * Está permitido para la categoria flotante, tipo de dato 
 	 * 	float y decimal, sin embargo para colocar el prefijo de f, F, d ó D
-	 * 	solo está permitido en las literales binario, octa, decimal, ya que 
+	 * 	solo está permitido en las literales octa, decimal, ya que 
 	 * 	para el hexadecimal se evaluara como parte del número.
+	 * 
+	 *  Para binario solo está permitido colocar l o L para un long
+	 *  en resto marcara error de compilación (f, F, d, D)
 	 * 
 	 */
 	
@@ -49,13 +52,13 @@ public class LiteralesCategoryNumeric {
 		
 		long datoEnBinario4 = 0B00001l;
 		//long datoEnBinario4 = 0B00001L;
-		assertEquals(1, datoEnBinario4);
+		assertEquals(1, datoEnBinario4);				
 		
-		float datoEnBinario5 = 0B00001;
-		//float datoEnOctal5 = 02342F;
-		assertEquals(1, datoEnBinario5, -.1);
+		//float datoEnBinario5 = 0B00001f;
+		//float datoEnOctal5 = 0B2342F;
+		//assertEquals(1, datoEnBinario5, -.1);
 		
-		double datoEnBinario6 = 0b0011;
+		double datoEnBinario6 = 0b001;
 		//double datoEnOctal6 = 02342l;
 		assertEquals(3, datoEnBinario6, -.1);
 		

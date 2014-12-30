@@ -15,7 +15,7 @@ public class ReturnType {
 	//  el tipo caracter es solo permitido para los integer
 	
 	// Los datos decimales float y double
-	// solo se permitira regresar un float si el tipo de retorno
+	// solo se permitira regresar cualquier tipo de los integer y el tipo char si el tipo de retorno
 	// es float o double, ninguno otro, si se trata de realizar
 	// enviara en error de compilación
 	@Test
@@ -23,6 +23,7 @@ public class ReturnType {
 	{
 		assertEquals('a', metodoReturnType(10));
 		assertEquals(1.34, metodoReturnType(10.2F), .10);
+		assertEquals(20, metodoReturnType(10L), -.1);
 		
 	}
 	
@@ -38,7 +39,18 @@ public class ReturnType {
 		
 		float miDato = 1.34F;
 		
-		return miDato;
+		return miDato;		
+	}
+	
+	public float metodoReturnType(long dato) {
+		
+		long variable = 20;
+//		int variable = 20;
+//		short variable = 20;
+//		byte variable = 20;
+//		char variable = 'a';
+		return variable;
+		
 	}
 	
 	/* Esto mandara error ya que no se permite castear 
