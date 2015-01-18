@@ -8,7 +8,7 @@ public class Super {
 	@Test
 	public void testSuper() {
 		
-		assertEquals("Gabo", new Desarrollador("Gabo").nombre);		
+		assertEquals("Gabo", ((Empleado) new Desarrollador("Gabo")).nombre);		
 		
 	}
 
@@ -19,23 +19,24 @@ class Empleado {
 	
 	String nombre;
 	
-	//public Empleado() {}
-	
-	public Empleado(String nombre) {
-		this.nombre = nombre;
-	}
+	public Empleado() {}
+//	
+//	public Empleado(String nombre) {
+//		this.nombre = nombre;
+//	}
 	
 }
 
 class Desarrollador extends Empleado {
 	
+	String nombre = "Goku";
 	
 	// Si no declaramos ningun constructor en la clase padre
 	// el compilador incluye el constructor por default y por ejemplo
 	// en todos nuestros constructores de la clase desarrollador
 	// implicitamente se agrega super();
 	public Desarrollador(String nombre) {
-		super(nombre);
+		//super(nombre);
 		
 		// Hace referencia a si mismo llamando a sus atributos derivados		
 		//this.nombre = nombre;
@@ -49,7 +50,7 @@ class Desarrollador extends Empleado {
 	}
 	
 	public Desarrollador() {
-		super("");
+		//super("");
 	}
 	
 }
