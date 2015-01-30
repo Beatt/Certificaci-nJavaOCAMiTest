@@ -1,4 +1,7 @@
+import java.io.IOException;
+
 import org.junit.Test;
+
 import static org.junit.Assert.*;
 
 public class ReturnType {
@@ -45,7 +48,9 @@ public class ReturnType {
 	public float metodoReturnType(long dato) {
 		
 		long variable = 20;
-//		int variable = 20;
+		
+		System.out.print( 22 + "ag"+ 'a');
+//		int variable = 20; 
 //		short variable = 20;
 //		byte variable = 20;
 //		char variable = 'a';
@@ -61,5 +66,5 @@ public class ReturnType {
 		
 		return miDato;
 	}*/
-	
+
 }

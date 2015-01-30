@@ -1,5 +1,8 @@
 import static org.junit.Assert.*;
 
+import java.util.List;
+import java.util.ArrayList;
+
 import org.junit.Test;
 
 public class WrapperClass {
@@ -151,6 +154,58 @@ public class WrapperClass {
 //		Character chr = new Character('a');
 		
 		//System.out.println(new Sub1());
+		
+		
+	}
+	
+	@Test
+	public void parse() {
+		
+		// Boleean
+		assertFalse(Boolean.parseBoolean("false"));
+		assertFalse(Boolean.parseBoolean("slada"));		
+		assertTrue(Boolean.parseBoolean("TRUE"));
+	
+		// Numeric
+		assertEquals(300, Short.parseShort("300"));
+		
+		// NumberFormatException
+		//assertEquals(300, Short.parseShort("30a"));
+		
+		Short objShort = new Short((short) 1);
+		assertEquals(1, objShort.shortValue());
+		
+		Byte objByte = new Byte((byte) 1);
+		assertEquals(1, objByte.byteValue());
+		
+//		Float objFloat = Float.valueOf("222.2");
+//		assertEquals(222.199, objFloat.floatValue(), -.1);
+		
+		Integer objInteger = Integer.valueOf("300");
+		assertEquals(300, objInteger.intValue());				
+		
+		
+	}
+	
+	
+	@Test
+	public void arrayListWrapper() {
+		
+		List<Integer> lstInteger = new ArrayList<>(5);
+		lstInteger.add(2);
+		lstInteger.add(3);
+		assertEquals(2, lstInteger.size());
+		
+		Integer value = lstInteger.get(0);
+		assertEquals(2, value.intValue());
+		
+		
+		// Se le conoce como autoboxing
+		// Cuando se imprime un wrapper, atuomaticamente llama intValue
+		// o dependiendo el tipo de dato con el que se definio.
+		System.out.println(value);
+		System.out.println(lstInteger.get(0));		
+		if(lstInteger.get(0) != 3);
 		
 		
 	}
