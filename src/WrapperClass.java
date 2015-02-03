@@ -1,5 +1,8 @@
 import static org.junit.Assert.*;
 
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 import java.util.ArrayList;
 
@@ -10,6 +13,8 @@ public class WrapperClass {
 	/*
 	 * 
 	 * Observaciones
+	 * 
+	 * 		Todas las clases son final.		
 	 * 
 	 * 		O__o = Los wrappers Byte, Short, Integer, Float, Double heredan de la clase abstracta NUMBER
 	 * 
@@ -209,7 +214,34 @@ public class WrapperClass {
 		
 		
 	}
+
+	@Test
+	public void arrayToList() {
+		
+		List<Short> listShort = new ArrayList<>(2);
+		listShort.add((short)2);
+		listShort.add((short)3);
+		listShort.add((short)4);
+		
+		Object[] objArray = (Object[]) listShort.toArray();		
+		assertArrayEquals(objArray, listShort.toArray());
+		
+		// Devuelve un array con los elementos correspondientes y además puede
+		// devolver un array con más capacidad.
+		Short[] arrayInteger = listShort.toArray(new Short[3]);
+		assertArrayEquals(arrayInteger, objArray);
+		
+	}
 	
+	@Test
+	public void sorting() {
+		
+		List<Byte> list = Arrays.asList((byte) 10, (byte) 3, (byte) 4);
+		Collections.sort(list);
+		
+		assertEquals(10, list.get(2).byteValue());
+		
+	}
 }
 
 //
